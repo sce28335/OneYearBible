@@ -31,6 +31,10 @@ body {
   margin: 0 auto;
   padding: 2rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .devotional-card, .scripture-card, .audio-card, .all-passages-card {
   background-color: var(--background-color);
@@ -153,11 +157,11 @@ body {
 }
 .date-navigation {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-top: auto;
 }
 .nav-btn {
-  padding: 0.5rem 1rem;
-  margin-right: 1rem;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem; /* Add margin to evenly space out the buttons */
   background-color: #000000;
   color: white;
   border: none;
