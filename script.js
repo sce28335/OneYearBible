@@ -21,7 +21,7 @@ function renderDevotional(index) {
             <div class="devotional-date">${data.Title}</div>
             <div class="day-of-week">${data.Day.toUpperCase()}</div>
             <div class="devotional-content">${data.DevoText.split('\n').map(p => `<p>${p}</p>`).join('')}</div>
-            <div class="author">${data.Author}</div>
+            <div class="author">Larry Stockstill</div>
         </div>
         <div class="scripture-card">
             <h2 class="scripture-heading">Scripture Reading</h2>
@@ -50,8 +50,8 @@ function renderDevotional(index) {
         <div class="all-passages-card">
             <h2 class="all-passages-heading">Read All of Today's Passages</h2>
             <div class="all-passages-links">
-                <a class="link-btn" href="https://www.biblegateway.com/passage/?search=${encodeURIComponent(data.Ot + '; ' + data.Nt + '; ' + data.Psalm + '; ' + data.Prov)}&version=NIV" target="_blank">All Passages in NIV</a>
-                <a class="link-btn" href="https://www.biblegateway.com/passage/?search=${encodeURIComponent(data.Ot + '; ' + data.Nt + '; ' + data.Psalm + '; ' + data.Prov)}&version=NLT" target="_blank">All Passages in NLT</a>
+                <a class="link-btn" href="https://www.biblegateway.com/passage/?search=${encodeURIComponent(data.Ot + '; ' + data.Nt + '; ' + data.Psalm + '; ' + data.Prov)}&version=NIV" target="_blank">NIV</a>
+                <a class="link-btn" href="https://www.biblegateway.com/passage/?search=${encodeURIComponent(data.Ot + '; ' + data.Nt + '; ' + data.Psalm + '; ' + data.Prov)}&version=NLT" target="_blank">NLT</a>
             </div>
         </div>
     `;
@@ -59,6 +59,8 @@ function renderDevotional(index) {
     document.getElementById('devotional-content').innerHTML = content;
     document.getElementById('prevDay').disabled = (index === 0);
     document.getElementById('nextDay').disabled = (index === devotionalData.length - 1);
+    document.getElementById('prevDayBottom').disabled = (index === 0);
+    document.getElementById('nextDayBottom').disabled = (index === devotionalData.length - 1);
     currentIndex = index;
 }
 
@@ -94,5 +96,18 @@ document.getElementById('nextDay').onclick = () => {
 };
 document.getElementById('todayBtn').onclick = () => {
     console.log("Today button clicked");
+    loadToday();
+};
+
+document.getElementById('prevDayBottom').onclick = () => {
+    console.log("Previous Day button (bottom) clicked");
+    if (currentIndex > 0) renderDevotional(currentIndex - 1);
+};
+document.getElementById('nextDayBottom').onclick = () => {
+    console.log("Next Day button (bottom) clicked");
+    if (currentIndex < devotionalData.length - 1) renderDevotional(currentIndex + 1);
+};
+document.getElementById('todayBtnBottom').onclick = () => {
+    console.log("Today button (bottom) clicked");
     loadToday();
 };
