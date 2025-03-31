@@ -37,7 +37,7 @@ body {
 .devotional-date {
   font-size: 2.2rem;
   font-weight: 600;
-  color: var(--accent-color);
+  color: #000000;
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -47,7 +47,7 @@ body {
   opacity: 0.7;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--accent-color);
+  color: #000000;
   display: block;
   margin-top: 5px;
 }
@@ -98,7 +98,7 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: var(--accent-color);
+  background-color: #000000;
   color: #ffffff !important;
   border-radius: 9999px;
   text-decoration: none;
@@ -107,7 +107,7 @@ body {
   transition: all 0.3s ease;
 }
 .link-btn:hover {
-  background-color: #e63b30;
+  background-color: #333333;
 }
 .audio-player audio {
   width: 100%;
@@ -123,7 +123,7 @@ body {
 .site-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--accent-color);
+  color: #000000;
   margin: 0;
   padding: 1rem 0;
   letter-spacing: -0.02em;
@@ -135,7 +135,7 @@ body {
   display: block;
   width: 250px;
   height: 4px;
-  background-color: var(--accent-color);
+  background-color: #000000;
   margin-top: 10px;
   border-radius: 2px;
 }
@@ -146,7 +146,7 @@ body {
 .nav-btn {
   padding: 0.5rem 1rem;
   margin-right: 1rem;
-  background-color: var(--accent-color);
+  background-color: #000000;
   color: white;
   border: none;
   border-radius: 5px;
@@ -159,7 +159,7 @@ body {
   cursor: not-allowed;
 }
 .nav-btn:hover:enabled {
-  background-color: #e63b30;
+  background-color: #333333;
 }
 @media (max-width: 768px) {
   .container {
@@ -187,4 +187,3 @@ body {
     width: 80%;
   }
 }
-```
