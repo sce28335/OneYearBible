@@ -28,7 +28,7 @@ function renderDevotional(index) {
             <div class="scripture-list">
                 ${['Ot','Nt','Psalm','Prov'].map(label => `
                     <div class="scripture-item">
-                        <span class="scripture-label">${label === 'Ot' ? 'Old Testament' : label === 'Nt' ? 'New Testament' : label}</span>
+                        <span class="scripture-label">${label === 'Ot' ? 'Old Testament' : label === 'Nt' ? 'New Testament' : label === 'Prov' ? 'Proverbs' : label}</span>
                         <div class="scripture-reference">${data[label]}</div>
                         <div class="scripture-links">
                             <a class="link-btn" href="https://www.biblegateway.com/passage/?search=${encodeURIComponent(data[label])}&version=NIV" target="_blank">NIV</a>
