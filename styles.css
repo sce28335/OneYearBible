@@ -140,6 +140,7 @@ body {
   letter-spacing: -0.02em;
   display: block;
   text-transform: uppercase;
+  position: relative;
 }
 .site-title::after {
   content: '';
@@ -147,7 +148,7 @@ body {
   width: 250px;
   height: 4px;
   background-color: #000000;
-  margin-top: 10px;
+  margin: 10px auto 0; /* Center the line */
   border-radius: 2px;
 }
 .date-navigation {
