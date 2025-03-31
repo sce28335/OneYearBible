@@ -19,6 +19,12 @@ body {
   color: var(--text-color);
   line-height: 1.5;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 20px; /* Added padding to allow scrolling */
+  text-align: center;
 }
 .container {
   max-width: 900px;
@@ -77,8 +83,13 @@ body {
 }
 .scripture-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+.scripture-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .scripture-label {
   font-weight: 600;
@@ -116,7 +127,7 @@ body {
   justify-content: center;
 }
 .header {
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
   padding: 0 0 1rem 0;
 }
@@ -140,7 +151,7 @@ body {
   border-radius: 2px;
 }
 .date-navigation {
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
 }
 .nav-btn {
