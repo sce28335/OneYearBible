@@ -1,0 +1,26 @@
+title: One Year Bible
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+  - jekyll-github-metadata
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+github:
+  is_project_page: true
+markdown: CommonMarkGhPages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - README.md
+  - LICENSE.txt
+permalink: pretty
+paginate: 10
+paginate_path: "/page:num/"
