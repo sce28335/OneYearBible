@@ -61,6 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('prevDay').disabled = (index === 0);
         document.getElementById('nextDay').disabled = (index === devotionalData.length - 1);
         currentIndex = index;
+        
+        // Show navigation after content is loaded
+        document.querySelector('.date-navigation').style.opacity = 1;
     }
 
     function loadToday() {
