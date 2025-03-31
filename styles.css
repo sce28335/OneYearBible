@@ -19,10 +19,11 @@ body {
   color: var(--text-color);
   line-height: 1.5;
   overflow-x: hidden;
+  overflow-y: auto;  /* Ensure vertical scrolling is enabled */
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 20px; /* Added padding to allow scrolling */
   text-align: center;
 }
@@ -34,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  min-height: 100%;
 }
 .devotional-card, .scripture-card, .audio-card, .all-passages-card {
   background-color: var(--background-color);
