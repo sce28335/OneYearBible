@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+</head>
+<body>
+  <script>
+    const monthNames = [
+      "january", "february", "march", "april", "may", "june",
+      "july", "august", "september", "october", "november", "december"
+    ];
+
+    const today = new Date();
+    const month = monthNames[today.getMonth()];
+    const day = today.getDate();
+
+    const postUrl = `https://itowndevo.wpenginepowered.com/${month}-${day}/`;
+    window.location.href = postUrl;
+  </script>
+</body>
+</html>
