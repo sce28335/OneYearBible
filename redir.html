@@ -1,22 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Loading...</title>
-</head>
-<body>
-  <script>
-    const monthNames = [
-      "january", "february", "march", "april", "may", "june",
-      "july", "august", "september", "october", "november", "december"
-    ];
+<style>
+  .book {
+    width: 100px;
+    height: 140px;
+    position: relative;
+    perspective: 600px;
+    margin: 100px auto;
+  }
 
-    const today = new Date();
-    const month = monthNames[today.getMonth()];
-    const day = today.getDate();
+  .page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    transform-origin: left center;
+    animation: flip 1.5s infinite;
+  }
 
-    const postUrl = `https://itowndevo.wpenginepowered.com/${month}-${day}/`;
-    window.location.href = postUrl;
-  </script>
-</body>
-</html>
+  .page:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .page:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+
+  .page:nth-child(3) {
+    animation-delay: 1s;
+  }
+
+  @keyframes flip {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(-180deg);
+    }
+    100% {
+      transform: rotateY(-180deg);
+    }
+  }
+</style>
+
+<div class="book">
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      const monthNames = [
+        "january", "february", "march", "april", "may", "june",
+        "july", "august", "september", "october", "november", "december"
+      ];
+
+      const today = new Date();
+      const month = monthNames[today.getMonth()];
+      const day = today.getDate();
+
+      const postUrl = `https://itowndevo.wpenginepowered.com/${month}-${day}/`;
+      window.location.href = postUrl;
+    }, 3000); // 3-second delay
+  });
+</script>
